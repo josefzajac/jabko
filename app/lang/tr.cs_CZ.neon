@@ -1,0 +1,42 @@
+
+modal:
+    close: Zavřít
+    vote: Hlasovat
+    login: Přihlásit
+    register: Zaregistrovat
+    register_button: Registrovat
+    add: Přidej
+    fb_share: Sdílet na facebooku
+    add_photo: '+ Přidej fotografii'
+    logout: Odhlásit
+    fb_login: 'Přihlásit přes Facebook'
+    email: 'E-mail'
+    change_password: "Změna hesla"
+    old_password: "Současné heslo"
+    new_password: "Nové heslo"
+    forgotten: "Zapomněli jste své heslo?"
+    forgotten_proceed: 'Obnovit heslo'
+    recovery_button: 'Uložit nové heslo'
+
+user:
+    success: 'Byl jste úspěšně přihlášen.'
+    not_found: 'Uživatel nenalezen.'
+    wrong_pass: 'Chybné heslo.'
+    error: 'Nastala chyba při přihlášení.'
+    user_registered: 'Registrace dokončena.'
+    email_unique: 'E-mail je již registrován.'
+    recovery_error: 'Chyba při obnovení hesla. Zkuste to, prosím, znovu.'
+    change_password: 'Změnit heslo'
+    wrong_old_password: 'Současné heslo je chybné.'
+    forgotten_subject: 'Obnova hesla pro Fotosoutěž'
+    recovery_sent: 'Na zadanou e-mailovou adresu byly zaslány instrukce.'
+
+mail:
+    header: "Dobrý den,"
+    recovery1: "Vážený uživateli,\n\ntento e-mail Vám byl zaslán z důvodu vaší žádosti o obnovení zapomenutého hesla.\nPokud jste o to nežádal vy, zvažte základní bezpečnostní pravidla, například změnu hesla na vašem primárním e-mailu."
+    recovery2: "Tento odkaz Vás dovede na zadání nového hesla. Odkaz je platný pouze 1 hodinu."
+
+admin:
+    access_not_granted: "Nemate opravneni do teto sekce"
+    item_added: "Položka přidána"
+    item_updated: "Položka upravena"

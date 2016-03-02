@@ -1,0 +1,53 @@
+{extends "../@admin.latte"}
+
+{block mainHeader}
+    <h1>
+        Particpations
+        <small>Administration</small>
+    </h1>
+    <h4>
+        <a n:href="detail"><span class="glyphicon glyphicon-pencil"></span>&nbsp;Pridej</a>
+    </h4>
+{/block}
+
+{block mainContent}
+    <div class="row">
+
+        <div class="col-xs-12">
+            <div class="box">
+                <div class="box-header">
+                    <h3 class="box-title">Listing</h3>
+
+                    <div class="box-tools">
+                        <div class="input-group input-group-sm" style="width: 150px;">
+                            <input type="text" name="table_search" class="form-control pull-right" placeholder="Search">
+
+                            <div class="input-group-btn">
+                                <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body table-responsive no-padding">
+                    <table class="table table-hover">
+                        <tr>
+                            <th>ID</th>
+                            <th>price</th>
+                            <th>price_from</th>
+                            <th>price_to</th>
+                            <th>Edit</th>
+                        </tr>
+                        <tr n:foreach="$all_items as $item" class="bs-glyphicons">
+                            <td>{$item->id}</td>
+                            <td>{$item->price}</td>
+                            <td>{$item->price_from}</td>
+                            <td>{$item->price_to}</td>
+                            <td><a n:href="detail $item->id"><span class="glyphicon glyphicon-pencil"></span>&nbsp;Uprav</a></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+{/block}

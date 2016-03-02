@@ -1,0 +1,26 @@
+What do todo:
+
+# Server side
+1) forwared apache hosts to www/index.php
+- sudo nano /etc/apache2/sites-available/001-cloud9.con
+- DocumentRoot /home/ubuntu/workspace/www
+- <Directory /home/ubuntu/workspace/www>
+- sudo service apache2 restart
+2) https://docs.c9.io/docs/setting-up-mysql
+- https://docs.c9.io/docs/setting-up-mysql
+- setup MySql (user <c9 user>, no pass, database c9>
+- change password
+3) php composer.phar install
+4) php www/index.php orm:schema-tool:update --force
+5) npm 
+- nvm install v4.2.2
+- npm install
+- bower install
+- gulp
+
+Adminer: http://<repo>-<c9user>.c9users.io/adminer.php
+6) register user
+- in adminer add user privileges to 'a:1:{i:0;s:13:"administrator";}'
+
+7) Admin
+http://jabko-josefzajac.c9users.io/admin/

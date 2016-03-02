@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{ifset title}{include title|striptags} | {/ifset}TITLE</title>
+    
+    <link href="{$basePath}/css/frontend/app.css?{$gulpVersion}" rel="stylesheet"/>
+
+    {ifset metaOpengraph}{include metaOpengraph}{/ifset}
+    {ifset metaTwittercard}{include metaTwittercard}{/ifset}
+
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="{$basePath}/Modules/Common/Scripts/html5shiv.js"></script>
+    <script src="{$basePath}/Modules/Common/Scripts/respond.min.js"></script>
+    <link href="{$basePath}/Themes/Default/Css/iefix.css" rel="stylesheet">
+    <![endif]-->
+    <script type="text/javascript">
+    var onLoad = new Array;
+    </script>
+</head>
+<body class="body">
+
+{include '_menu.latte'}
+
+{block flashMessage}
+    {include '_flashes.latte'}
+{/block}
+
+{include content}
+
+<script src="{$basePath}/js/frontend/libs.js?{$gulpVersion}" type="text/javascript" async></script>
+
+{ifset jsBlock}{include jsBlock}{/ifset}
+
+</body>
+</html>

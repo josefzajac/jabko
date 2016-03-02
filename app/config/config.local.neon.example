@@ -1,0 +1,25 @@
+parameters:
+	memcached:
+		host: localhost
+		port: 11211
+		prefix: xxx
+
+doctrine:
+    user: XXY
+    password: YYY
+    dbname: c9
+
+facebook:
+    appId: "...."
+    appSecret: "...."
+
+images:
+    storage:
+        basePath: %appDir%/../www
+        baseUrl: http://www.dev
+
+#disable latte cache for dev ;)
+services:
+    nette.latteFactory:
+        setup:
+            - setTempDirectory(null)

@@ -1,0 +1,16 @@
+# App
+app/config/config.local.neon
+app/config/config.local.neon.tst
+app/config/config.local.neon.prod
+
+.vagrant
+.c9
+.idea
+
+# Libraries
+vendor
+node_modules
+bower_components
+
+# Dummy
+www/admin-lte

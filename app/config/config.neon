@@ -1,0 +1,83 @@
+parameters:
+	libsDir: %appDir%/../libs
+	memcached:
+		host: host
+		port: port
+		prefix: prefix
+	admin_mail: xxx@gmail.com
+
+	assets:
+		competitions: %wwwDir%/assets/images/competitions
+		participations: %wwwDir%/assets/images/participations
+		stylesheets: %wwwDir%/assets/stylesheets/competitions
+
+php:
+	date.timezone: Europe/Prague
+
+doctrine:
+    user: user
+    password: pwd
+    dbname: dbname
+    metadata:
+        App: %libsDir%/Model/Entity
+
+#facebook:
+#    appId: "1234567890"
+#    appSecret: "12345678901234567890123456789012"
+#    permissions: [public_profile, email]
+#    graphVersion: v2.5
+
+application:
+	errorPresenter: Error
+	mapping:
+		*: App\*Module\Presenters\*Presenter
+
+session:
+	expiration: 14 days
+
+translation:
+    default: cs
+    fallback: [cs_CZ, cs]
+    whitelist: [cs, en, de, ru]
+
+images:
+    storage:
+        basePath: %appDir%/../www
+        baseUrl: http://XXX.dev
+    namespaces:
+        '/assets/images/iiimages':
+            presets:
+                medium: 250x250 (stretch)
+                large: 500x500 (stretch)
+nette:
+    mailer:
+        smtp: false
+
+services:
+	# Router
+	router: App\RouterFactory::createRouter
+
+	cacheStorage: Nette\Caching\Storages\FileStorage(%appDir%/../temp/cache)
+
+	# Security
+	authenticator: App\Security\Authenticator
+	authorizator: App\Security\Acl
+
+	# Repositories
+	- App\Model\Repository\MailHistoryRepo()
+	- App\Model\Repository\Users()
+
+	# Factory
+	- App\Model\Factory\EntityFactory()
+	- App\Email\MyMail()
+
+extensions:
+    # Kdyby
+    console: Kdyby\Console\DI\ConsoleExtension
+    events: Kdyby\Events\DI\EventsExtension
+    annotations: Kdyby\Annotations\DI\AnnotationsExtension
+    doctrine: Kdyby\Doctrine\DI\OrmExtension
+#    facebook: Kdyby\Facebook\DI\FacebookExtension
+    validator: Kdyby\Validator\DI\ValidatorExtension
+    translation: Kdyby\Translation\DI\TranslationExtension
+    images: Carrooi\ImagesManager\DI\ImagesManagerExtension
