@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "46676c4dfbce4799c6be8f16a4665830",
-    "content-hash": "55573d97b9e435194015285c1d0a697c",
+    "hash": "0ee9b2030cc9a583d18d2fb2b0f86fb8",
+    "content-hash": "77c105e214b1c1c6d46f8358636069ae",
     "packages": [
         {
             "name": "carrooi/images-manager",
